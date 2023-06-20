@@ -2,16 +2,22 @@ import React from "react";
 import { View, Text, StyleSheet, SafeAreaView, TouchableOpacity } from "react-native";  
 import {FontAwesome5} from "@expo/vector-icons"
 
-export default class Header extends React.Component{ //barra lateral
+interface Props {
+    navigation: any,
+    name: any
+  }
+
+export default class Header extends React.Component<Props>{ //barra lateral
     render(){
     return(
-        <View>
+        <View style = {style.container}>
              <SafeAreaView style={{flex: 1}}>
                 <TouchableOpacity style={{alignItems: "flex-end", margin: 16}} onPress={this.props.navigation.openDrawer}>
-                    <FontAwesome5 name="bars" size={24}>
-
-                    </FontAwesome5>
+                    <FontAwesome5 name="bars" size={24}/ >
                 </TouchableOpacity>
+                <View style={{flex: 1, alignItems: "center", justifyContent: "center"}}>
+                    <Text style={style.text}>{this.props.name}Screen</Text>
+                </View>
              </SafeAreaView>
         </View>
     );
