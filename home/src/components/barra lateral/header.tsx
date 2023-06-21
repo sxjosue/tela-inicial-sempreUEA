@@ -20,7 +20,7 @@ export default class Header extends React.Component<Props>{ //barra lateral
                 </View>
              </SafeAreaView>
         </View>
-    );
+        );
     }
 }
 
