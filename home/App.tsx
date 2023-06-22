@@ -1,30 +1,36 @@
-import { StatusBar } from 'expo-status-bar';
-import { StyleSheet, Text, View } from 'react-native';
-import {createAppContainer} from "react-navigation";
+import { StyleSheet, Text, View, Button } from 'react-native';
+//import {createAppContainer} from "react-navigation";
 import { NavigationContainer } from '@react-navigation/native';
 import {createDrawerNavigator} from "@react-navigation/drawer";
-import {Dimensions} from "react-native";
 import {Feather} from "@expo/vector-icons";
 import {profileScreen, mensageScreen, listScreen} from "./src/components/barra lateral";
 import Title from "./src/components/superior/index";
-import Header  from './src/components/barra lateral/header';
 import './src/components/barra lateral/index'
-import { AppRegistry } from 'react-native';
-
+import * as React from 'react';
 
 // Refaça o código de acordo com a documentação: https://reactnavigation.org/docs/drawer-based-navigation/
 
-function SideBar() {
+function SideBar({ navigation }) {
   return (
-    <View>
-      <Text>Profile</Text>
-      <Text>Mensagem</Text>
-      <Text>Lista</Text>
-      {/* Adicione mais opções de navegação ou conteúdo aqui */}
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Button
+        onPress={() => navigation.navigate('Notifications')}
+        title="Go to notifications"
+      />
     </View>
   );
 }
-const DrawerNavigation = createDrawerNavigator();
+
+function NotificationsScreen({ navigation }) {
+  return (
+    <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
+      <Button onPress={() => navigation.goBack()} title="Go back home" />
+    </View>
+  );
+}
+
+const Drawer = createDrawerNavigator();
+
  
 export default function App() {
   return (
@@ -32,11 +38,11 @@ export default function App() {
       <Title/>
 
       <NavigationContainer>
-        <DrawerNavigation.Navigator drawerContent={() => <SideBar />}>
-          <DrawerNavigation.Screen name="Home" component={index} />
-          {/* Adicione mais telas aqui */}
-        </DrawerNavigation.Navigator>
-      </NavigationContainer>
+      <Drawer.Navigator initialRouteName="Home">
+        <Drawer.Screen name="Home" component={SideBar} />
+        <Drawer.Screen name="Notifications" component={NotificationsScreen} />
+      </Drawer.Navigator>
+    </NavigationContainer>
 
     </View>
   );
