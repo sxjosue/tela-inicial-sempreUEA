@@ -1,6 +1,6 @@
 import { StyleSheet, Text, View, Button } from 'react-native';
 //import {createAppContainer} from "react-navigation";
-import { NavigationContainer } from '@react-navigation/native';
+import { NavigationContainer, NavigationProp } from '@react-navigation/native';
 import {createDrawerNavigator} from "@react-navigation/drawer";
 import {Feather} from "@expo/vector-icons";
 import {profileScreen, mensageScreen, listScreen} from "./src/components/barra lateral";
@@ -8,9 +8,15 @@ import Title from "./src/components/superior/index";
 import './src/components/barra lateral/index'
 import * as React from 'react';
 
-// Refaça o código de acordo com a documentação: https://reactnavigation.org/docs/drawer-based-navigation/
+// https://reaxctnavigation.org/docs/drawer-based-navigation/
+// Problema na biblioteca reanimated  do react
 
-function SideBar({ navigation }) {
+interface Props {
+  navigation: any,
+  name: any
+}
+
+function SideBar({ navigation} : {navigation: any}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button
@@ -21,7 +27,7 @@ function SideBar({ navigation }) {
   );
 }
 
-function NotificationsScreen({ navigation }) {
+function NotificationsScreen({ navigation }: {navigation: any}) {
   return (
     <View style={{ flex: 1, alignItems: 'center', justifyContent: 'center' }}>
       <Button onPress={() => navigation.goBack()} title="Go back home" />
