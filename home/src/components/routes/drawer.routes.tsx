@@ -1,7 +1,8 @@
 import React from "react-native";
 import {createDrawerNavigator} from '@react-navigation/drawer';
-import ScreenB from "../screens/screenB";
-import ScreenA from '../screens/screenA'
+import InqueritosEstatisticos from "../screens/Inquerito_estatisticos";
+import MinhaRede from '../screens/Minha_rede'
+import Eventos from '../screens/Eventos'
 
 const {Navigator, Screen} = createDrawerNavigator();
 
@@ -9,13 +10,18 @@ export default function DrawerRoutes(){
   return(
     <Navigator> 
       <Screen 
-        name = 'screenA'
-        component={ScreenA}
+        name = 'Minha rede'
+        component={MinhaRede}
       />
 
       <Screen 
-        name = 'screenB'
-        component={ScreenB}
+        name = 'Inquerito estatisticos'
+        component={InqueritosEstatisticos}
+      />
+
+      <Screen 
+        name = 'Eventos'
+        component={Eventos}
       />
       
     </Navigator> //navegacao de transicao de telas 
