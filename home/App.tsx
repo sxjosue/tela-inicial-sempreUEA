@@ -4,15 +4,8 @@ import Routes from './src/components/routes';
 
 export default function App() {
   return (
+    <>
       <Routes/>
+    </>
   );
 }
-
-const styles = StyleSheet.create({
-  container: {
-    flex: 1,
-    backgroundColor: '#F9F9F9',
-    alignItems: 'center',
-    justifyContent: 'center',
-  },
-}); 
