@@ -1,5 +1,4 @@
 import { setStatusBarBackgroundColor } from "expo-status-bar";
-import { alignPropType } from "react-bootstrap/esm/types";
 import React from "react-native";
 import { View, Text, ImageComponent, Button} from "react-native";
 import {MaterialIcons, FontAwesome5, AntDesign} from "@expo/vector-icons";
