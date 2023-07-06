@@ -1,12 +1,12 @@
 import {DrawerItem, createDrawerNavigator} from '@react-navigation/drawer';
 import {MaterialIcons, FontAwesome5, Entypo} from "@expo/vector-icons"; //biblioteca de icones
 import InqueritosEstatisticos from "../screens/Inquerito_estatisticos";
-import MinhaRede from '../screens/Minha_rede'
+import MinhaRede from '../screens/minhaRede/Minha_rede'
 import Eventos from '../screens/Eventos'
 import Oportunidades from "../screens/Oportunidades";
 import Asitencia_estudantil from "../screens/Assitencia";
 import Indicadores_instucionais from "../screens/Indicadores";
-import {styles} from "../THEMES/defaultTheme"
+import {styles} from "../defaultTheme"
 
 const {Navigator, Screen} = createDrawerNavigator();
 

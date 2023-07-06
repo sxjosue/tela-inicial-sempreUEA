@@ -2,15 +2,14 @@ import { setStatusBarBackgroundColor } from "expo-status-bar";
 import React from "react-native";
 import { View, Text, ImageComponent, Button} from "react-native";
 import {MaterialIcons, FontAwesome5, AntDesign} from "@expo/vector-icons";
-import {HomeTheme} from "../THEMES/homeTheme"
-import {styles} from  "../THEMES/defaultTheme"
+import {styles} from  "./style"
 
 
 export default function MinhaRede(){
     return(
-        <View style={styles.container}>
+        <View>
             
-            <View style={HomeTheme.container}>
+            <View>
                 <MaterialIcons name="people" size={22}/>
                 <Text>Minha rede</Text>
                 <AntDesign name="filter" size={22}/>
