@@ -18,36 +18,9 @@ const styles = StyleSheet.create({
                 height: '100%',
         },
 // ---------------------------------------------------
-        barra:{ //estilixzando o box barra
-                flexDirection: 'row',
-                paddingTop: 130, 
-                backgroundColor: '#D3D3D3',
-        },
-        styleTextbarra: {       //estilizando os conteúdos da barra
-                color:'#1D5E24',
-                fontSize: 24,
-                fontFamily: 'Roboto',
-                fontWeight: 'bold',
-        },
+        barra:{flexDirection: 'row', paddingTop: 130, backgroundColor: '#F9F9F9', marginLeft: 21},  //estilixzando o box barra
+        styleTextbarra: { color:'#1D5E24', fontSize: 24, fontFamily: 'Roboto', fontWeight: 'bold', marginLeft: 10}, //estilizando os conteúdos da barra
 // -------------------------------------------
-        boxbutton:{
-                paddingTop: 73, //196
-                flexDirection: 'row',
-                fex: 1,
-                backgroundColor: '#1D5E24',     // cor verde do layout do do sempre
-        },
-        bottonstyle: {
-                alignItems: 'center',
-                backgroundColor: '#F9F9F9',
-                padding: 10,
-                borderRadius: 22,
-                marginTop: 10,
-        },
-        buttonText: {
-                fontSize: 18,
-                color: '#797979',
-        },
-
 });
 
 export { styles }
