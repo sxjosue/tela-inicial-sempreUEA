@@ -1,4 +1,5 @@
 import { StyleSheet, TouchableOpacity, Text } from 'react-native';
+import React, { useState } from "react";
 
 const styles = StyleSheet.create({
     buttonText: {fontSize: 18, color: '#797979'},
@@ -7,7 +8,7 @@ const styles = StyleSheet.create({
     paddingTop: 6, //196 ou 72
     paddingBottom: 6,
     flexDirection: 'row',
-    marginLeft: '10%',
+    marginLeft: '3%',
     backgroundColor: '#F9F9F9', 
     
     },

@@ -21,7 +21,7 @@ const styles = StyleSheet.create({
 // ---------------------------------------------------
         barra:{flexDirection: 'row', paddingTop: 130, backgroundColor: '#F9F9F9', marginLeft: 21, marginBottom:'7%'},  //estilixzando o box barra
         styleTextbarra: { color:'#1D5E24', fontSize: 24, fontFamily: 'Roboto', fontWeight: 'bold', marginLeft: 10}, //estilizando os conteúdos da barra
-        stylefiltre: {marginStart: '55%'}, //"empurra a pesquisa e o filtro mais para a direita"
+        stylefiltre: {marginStart: '38%'}, //"empurra a pesquisa e o filtro mais para a direita"
         Stylesearch: {paddingLeft: 15,},
 // -------------------------------------------
 });
